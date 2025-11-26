@@ -2,15 +2,15 @@
 
 Workspace để lưu trữ, thực thi và quản lý các notebook cuộc thi Kaggle, hỗ trợ đa môi trường: **Local (conda)**, **Google Colab** và **Kaggle Kernels**.
 
-## ✨ Tính Năng
+## Tính Năng
 
 - 🔄 **Multi-Environment Support**: Notebook tự động phát hiện và cấu hình môi trường
-- 📦 **Reusable Core Utilities**: Thư viện dùng chung qua GitHub raw
-- 🎯 **Competition Templates**: Template chuẩn cho mỗi cuộc thi
-- 🛠️ **Local Development**: Conda environment với VS Code
-- 📊 **Best Practices**: Quy trình ML workflow chuẩn
+- **Reusable Core Utilities**: Thư viện dùng chung qua GitHub raw
+- **Competition Templates**: Template chuẩn cho mỗi cuộc thi
+- **Local Development**: Conda environment với VS Code
+- **Best Practices**: Quy trình ML workflow chuẩn
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Local Setup
 
@@ -43,7 +43,7 @@ code .
 2. Copy **Bootstrap Cell** từ template
 3. Chạy và code!
 
-## 📁 Cấu Trúc Repo
+## Cấu Trúc Repo
 
 ```
 n24q02m-kaggle-competitions/
@@ -72,7 +72,7 @@ n24q02m-kaggle-competitions/
 | ------------------------------------------- | ------------- | ---------- | --------------------------------------------------------------- |
 | [Titanic](https://www.kaggle.com/c/titanic) | 🚧 In Progress | -          | [solution.ipynb](competitions/titanic/notebooks/solution.ipynb) |
 
-## 🔧 Makefile Commands
+## Makefile Commands
 
 ```bash
 make help         # Hiển thị tất cả commands
@@ -81,7 +81,7 @@ make install      # Cài/update dependencies
 make clean        # Dọn dẹp cache
 ```
 
-## 💡 Workflow
+## Workflow
 
 ### Bắt đầu cuộc thi mới
 
@@ -119,16 +119,16 @@ make clean        # Dọn dẹp cache
 - [docs/HANDBOOK.md](docs/HANDBOOK.md) - Hướng dẫn chi tiết toàn diện
 - [competitions/titanic/README.md](competitions/titanic/README.md) - Hướng dẫn cuộc thi Titanic
 
-## 🔗 Useful Links
+## Useful Links
 
 - [Kaggle](https://www.kaggle.com/)
 - [Kaggle API](https://github.com/Kaggle/kaggle-api)
 - [Kaggle Learn](https://www.kaggle.com/learn)
 
-## 🤝 Contributing
+## Contributing
 
 Đây là repo cá nhân cho mục đích học tập và thực hành.
 
-## 📝 License
+## License
 
 MIT License - Free to use and modify

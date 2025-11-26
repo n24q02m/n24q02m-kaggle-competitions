@@ -486,10 +486,10 @@ kaggle competitions download -c new-competition \\
 - Code versioning dễ dàng
 
 **Best Practices:**
-- ✅ Luôn dùng conda environment riêng
-- ✅ Commit code thường xuyên (Git)
-- ✅ Track experiments (MLflow, Weights & Biases)
-- ✅ Save models với versioning (`model_v1_cv0.85.pkl`)
+- Luôn dùng conda environment riêng
+- Commit code thường xuyên (Git)
+- Track experiments (MLflow, Weights & Biases)
+- Save models với versioning (`model_v1_cv0.85.pkl`)
 
 **Checklist:**
 - [ ] Activated conda env
@@ -510,10 +510,10 @@ kaggle competitions download -c new-competition \\
 - RAM giới hạn
 
 **Best Practices:**
-- ✅ Lưu checkpoints thường xuyên vào Drive
-- ✅ Dùng `%%time` để track thời gian cells
-- ✅ Clear output không cần thiết (tiết kiệm RAM)
-- ⚠️ Mount Drive ngay đầu session
+- Lưu checkpoints thường xuyên vào Drive
+- Dùng `%%time` để track thời gian cells
+- Clear output không cần thiết (tiết kiệm RAM)
+- Mount Drive ngay đầu session
 
 **Tricks:**
 ```python
@@ -537,10 +537,10 @@ setInterval(ClickConnect,60000)
 - Internet off trong competition
 
 **Best Practices:**
-- ✅ Develop locally, test trên Kaggle
-- ✅ Dùng Kaggle Datasets cho external data
-- ✅ Enable GPU chỉ khi cần
-- ✅ Comment code rõ ràng (cho community)
+- Develop locally, test trên Kaggle
+- Dùng Kaggle Datasets cho external data
+- Enable GPU chỉ khi cần
+- Comment code rõ ràng (cho community)
 
 ---
 
@@ -660,4 +660,4 @@ assert predictions.min() >= 0 and predictions.max() <= 1, "Invalid probability!"
 
 ---
 
-**Happy Kaggling! 🚀**
+**Happy Kaggling! **

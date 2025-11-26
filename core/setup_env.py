@@ -68,9 +68,9 @@ class KaggleEnvironment:
             repo_user: GitHub username (dùng cho cloud)
             repo_name: Repository name (dùng cho cloud)
         """
-        print(f"🚀 Detected Environment: {self.env_type.upper()}")
-        print(f"📂 Root Path: {self.root_path}")
-        print(f"📊 Data Path: {self.data_path}")
+        print(f"Detected Environment: {self.env_type.upper()}")
+        print(f"Root Path: {self.root_path}")
+        print(f"Data Path: {self.data_path}")
 
         # Setup theo môi trường
         if self.env_type == "colab":
@@ -82,7 +82,7 @@ class KaggleEnvironment:
         else:
             self._setup_local()
 
-        print("✅ Setup Complete!")
+        print("Setup Complete!")
         return self
 
     def _setup_local(self):
@@ -90,7 +90,7 @@ class KaggleEnvironment:
         # Add root path to system path để import được core modules
         if str(self.root_path) not in sys.path:
             sys.path.insert(0, str(self.root_path))
-        print("ℹ️  Local: Sử dụng conda environment. Không tự động cài thư viện.")
+        print("Local: Sử dụng conda environment. Không tự động cài thư viện.")
         print("   Chạy: conda env create -f environment.yml (nếu chưa tạo env)")
         print("   Chạy: conda activate kaggle-competitions")
 
@@ -101,14 +101,14 @@ class KaggleEnvironment:
             try:
                 from google.colab import drive
 
-                print("📌 Mounting Google Drive...")
+                print("Mounting Google Drive...")
                 drive.mount("/content/drive")
             except Exception as e:
-                print(f"⚠️  Warning: Could not mount Drive: {e}")
+                print(f"Warning: Could not mount Drive: {e}")
 
     def _setup_kaggle(self):
         """Setup cho Kaggle Kernels"""
-        print("ℹ️  Kaggle: Environment sẵn sàng")
+        print("Kaggle: Environment ready")
 
     def _install_requirements(self, repo_user: str, repo_name: str):
         """
@@ -123,7 +123,7 @@ class KaggleEnvironment:
 
             # Download requirements.txt từ GitHub
             url = f"https://raw.githubusercontent.com/{repo_user}/{repo_name}/main/requirements.txt"
-            print(f"📦 Downloading requirements from: {url}")
+            print(f"Downloading requirements from: {url}")
 
             response = requests.get(url)
             response.raise_for_status()
@@ -133,18 +133,18 @@ class KaggleEnvironment:
             req_file.write_text(response.text)
 
             # Install requirements
-            print("⏳ Installing requirements...")
+            print("Installing requirements...")
             subprocess.check_call(
                 [sys.executable, "-m", "pip", "install", "-r", str(req_file), "-q"],
                 stderr=subprocess.DEVNULL,
             )
-            print("✅ Requirements installed")
+            print("Requirements installed")
 
             # Cleanup
             req_file.unlink()
 
         except Exception as e:
-            print(f"⚠️  Warning: Could not install requirements: {e}")
+            print(f"Warning: Could not install requirements: {e}")
             print("   Tiếp tục với các thư viện có sẵn...")
 
     def info(self):

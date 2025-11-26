@@ -12,20 +12,20 @@ help:
 setup:
 	@echo "Creating conda environment: kaggle-competitions"
 	conda env create -f environment.yml
-	@echo "✅ Environment created!"
+	@echo "Environment created!"
 	@echo "Activate with: conda activate kaggle-competitions"
 
 install:
 	@echo "Installing dependencies..."
 	conda env update -f environment.yml --prune
-	@echo "✅ Dependencies installed!"
+	@echo "Dependencies installed!"
 
 update-reqs:
 	@echo "Exporting requirements.txt from conda env..."
 	@echo "# Auto-generated from conda env" > requirements-full.txt
 	conda list --export >> requirements-full.txt
-	@echo "✅ Exported to requirements-full.txt"
-	@echo "⚠️  Note: Manually update requirements.txt with only necessary packages for Colab/Kaggle"
+	@echo "Exported to requirements-full.txt"
+	@echo "Note: Manually update requirements.txt with only necessary packages for Colab/Kaggle"
 
 clean:
 	@echo "Cleaning cache and temp files..."
@@ -34,4 +34,4 @@ clean:
 	find . -type f -name "*.pyc" -delete
 	find . -type f -name "*.pyo" -delete
 	find . -type f -name "*.tmp" -delete
-	@echo "✅ Cleaned!"
+	@echo "Cleaned!"
