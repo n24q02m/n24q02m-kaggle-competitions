@@ -4,7 +4,7 @@ Workspace để lưu trữ, thực thi và quản lý các notebook cuộc thi K
 
 ## Tính Năng
 
-- 🔄 **Multi-Environment Support**: Notebook tự động phát hiện và cấu hình môi trường
+- **Multi-Environment Support**: Notebook tự động phát hiện và cấu hình môi trường
 - **Reusable Core Utilities**: Thư viện dùng chung qua GitHub raw
 - **Competition Templates**: Template chuẩn cho mỗi cuộc thi
 - **Local Development**: Conda environment với VS Code
@@ -66,11 +66,11 @@ n24q02m-kaggle-competitions/
 └── README.md                 # This file
 ```
 
-## 📚 Competitions
+## Competitions
 
 | Competition                                 | Status        | Best Score | Notebook                                                        |
 | ------------------------------------------- | ------------- | ---------- | --------------------------------------------------------------- |
-| [Titanic](https://www.kaggle.com/c/titanic) | 🚧 In Progress | -          | [solution.ipynb](competitions/titanic/notebooks/solution.ipynb) |
+| [Titanic](https://www.kaggle.com/c/titanic) | In Progress | -          | [solution.ipynb](competitions/titanic/notebooks/solution.ipynb) |
 
 ## Makefile Commands
 
@@ -114,7 +114,7 @@ make clean        # Dọn dẹp cache
 
 5. **Mở notebook trong VS Code và code!**
 
-## 📖 Documentation
+## Documentation
 
 - [docs/HANDBOOK.md](docs/HANDBOOK.md) - Hướng dẫn chi tiết toàn diện
 - [competitions/titanic/README.md](competitions/titanic/README.md) - Hướng dẫn cuộc thi Titanic
