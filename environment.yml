@@ -1,0 +1,41 @@
+name: kaggle-competitions
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Python
+  - python=3.12
+
+  # Jupyter
+  - jupyter
+  - jupyterlab
+  - ipython
+  - ipykernel
+  - ipywidgets
+
+  # Core Data Science
+  - pandas
+  - numpy
+  - scipy
+
+  # Visualization
+  - matplotlib
+  - seaborn
+  - plotly
+
+  # Machine Learning
+  - scikit-learn
+  - xgboost
+  - lightgbm
+
+  # Utilities
+  - requests
+  - tqdm
+  - pyyaml
+
+  # Pip packages (nếu không có trên conda)
+  - pip
+  - pip:
+      - catboost
+      - optuna
+      - kaggle

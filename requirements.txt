@@ -1,0 +1,13 @@
+# Requirements cho Google Colab / Kaggle Kernels
+# Chỉ chứa các thư viện không có sẵn hoặc cần version cụ thể
+
+# ML Libraries (thường cần update version mới nhất)
+xgboost>=2.0.0
+lightgbm>=4.0.0
+catboost>=1.2.0
+
+# Hyperparameter Tuning
+optuna>=3.0.0
+
+# Kaggle API (để download datasets)
+kaggle>=1.5.0
