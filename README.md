@@ -7,12 +7,12 @@ Workspace để lưu trữ, thực thi và quản lý các notebook cuộc thi K
 - 🔄 **Multi-Environment Support**: Notebook tự động phát hiện và cấu hình môi trường
 - 📦 **Reusable Core Utilities**: Thư viện dùng chung qua GitHub raw
 - 🎯 **Competition Templates**: Template chuẩn cho mỗi cuộc thi
-- 🛠️ **Local Development**: Conda environment và Makefile commands
+- 🛠️ **Local Development**: Conda environment với VS Code
 - 📊 **Best Practices**: Quy trình ML workflow chuẩn
 
 ## 🚀 Quick Start
 
-### Local Setup (Lần đầu)
+### Local Setup
 
 ```bash
 # 1. Clone repo
@@ -25,13 +25,15 @@ make setup
 # 3. Activate environment
 conda activate kaggle-competitions
 
-# 4. Chạy Jupyter Lab
-make lab
+# 4. Mở VS Code
+code .
+# Chọn kernel: kaggle-competitions
+# Mở: competitions/titanic/notebooks/solution.ipynb
 ```
 
 ### Google Colab
 
-1. Mở notebook trên Colab
+1. Upload notebook lên Colab hoặc File → Open from GitHub
 2. Chạy **Bootstrap Cell** (cell đầu tiên) - tự động setup
 3. Bắt đầu code!
 
@@ -56,11 +58,12 @@ n24q02m-kaggle-competitions/
 │       │   └── solution.ipynb
 │       ├── models/           # Saved models
 │       └── submissions/      # Submission files
+├── docs/                     # Documentation
+│   └── HANDBOOK.md          # Hướng dẫn chi tiết
 ├── environment.yml           # Conda environment
-├── requirements.txt          # Pip requirements
+├── requirements.txt          # Pip requirements (cloud)
 ├── Makefile                  # Utility commands
-├── README.md                 # This file
-└── HANDBOOK.md              # Chi tiết hướng dẫn
+└── README.md                 # This file
 ```
 
 ## 📚 Competitions
@@ -75,7 +78,6 @@ n24q02m-kaggle-competitions/
 make help         # Hiển thị tất cả commands
 make setup        # Tạo conda environment
 make install      # Cài/update dependencies
-make lab          # Chạy Jupyter Lab
 make clean        # Dọn dẹp cache
 ```
 
@@ -95,14 +97,27 @@ make clean        # Dọn dẹp cache
 
 3. **Update bootstrap cell** với đường dẫn đúng
 
-4. **Download data** (xem hướng dẫn trong HANDBOOK.md)
+4. **Download data:**
 
-5. **Code và submit!**
+   ```bash
+   # Setup Kaggle API (chỉ lần đầu)
+   mkdir -p ~/.kaggle
+   # Download kaggle.json từ Kaggle → Account → API
+   mv ~/Downloads/kaggle.json ~/.kaggle/
+   chmod 600 ~/.kaggle/kaggle.json
+   
+   # Download competition data
+   kaggle competitions download -c <competition-name> -p competitions/<competition-name>/data
+   cd competitions/<competition-name>/data
+   unzip <competition-name>.zip
+   ```
+
+5. **Mở notebook trong VS Code và code!**
 
 ## 📖 Documentation
 
-- [HANDBOOK.md](HANDBOOK.md) - Hướng dẫn chi tiết
-- [Titanic README](competitions/titanic/README.md) - Hướng dẫn cuộc thi Titanic
+- [docs/HANDBOOK.md](docs/HANDBOOK.md) - Hướng dẫn chi tiết toàn diện
+- [competitions/titanic/README.md](competitions/titanic/README.md) - Hướng dẫn cuộc thi Titanic
 
 ## 🔗 Useful Links
 

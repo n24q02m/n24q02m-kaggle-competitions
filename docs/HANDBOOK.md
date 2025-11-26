@@ -411,14 +411,16 @@ unzip titanic.zip
 rm titanic.zip
 ```
 
-#### **Bước 4: Mở Notebook**
+#### **Bước 4: Mở Notebook trong VS Code**
 
 ```bash
-# Từ repo root
-make lab
+# Mở VS Code
+code .
 
-# Hoặc
-jupyter lab
+# Trong VS Code:
+# 1. Chọn kernel: kaggle-competitions
+# 2. Mở file: competitions/titanic/notebooks/solution.ipynb
+# 3. Bắt đầu code!
 ```
 
 ### 4.2 Setup Google Colab

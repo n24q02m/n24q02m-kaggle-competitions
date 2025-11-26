@@ -1,4 +1,4 @@
-.PHONY: help setup install update-reqs lab clean
+.PHONY: help setup install update-reqs clean
 
 help:
 	@echo "Kaggle Competitions Makefile"
@@ -7,7 +7,6 @@ help:
 	@echo "  make setup        - Tạo conda environment từ environment.yml"
 	@echo "  make install      - Cài đặt dependencies trong conda env"
 	@echo "  make update-reqs  - Export requirements.txt từ conda env"
-	@echo "  make lab          - Chạy Jupyter Lab"
 	@echo "  make clean        - Dọn dẹp cache và temp files"
 
 setup:
@@ -27,10 +26,6 @@ update-reqs:
 	conda list --export >> requirements-full.txt
 	@echo "✅ Exported to requirements-full.txt"
 	@echo "⚠️  Note: Manually update requirements.txt with only necessary packages for Colab/Kaggle"
-
-lab:
-	@echo "Starting Jupyter Lab..."
-	jupyter lab
 
 clean:
 	@echo "Cleaning cache and temp files..."
