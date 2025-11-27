@@ -11,3 +11,12 @@ optuna>=3.0.0
 
 # Kaggle API (để download datasets)
 kaggle>=1.5.0
+
+# Deep Learning & NLP
+transformers>=4.40.0
+sentence-transformers>=3.0.0
+
+# ONNX Conversion & Quantization
+onnx>=1.15.0
+onnxruntime>=1.17.0
+optimum[onnxruntime]>=1.19.0

@@ -45,7 +45,7 @@ code .
 
 ## Cấu Trúc Repo
 
-```
+```text
 n24q02m-kaggle-competitions/
 ├── core/                      # Utilities dùng chung
 │   ├── __init__.py
@@ -68,9 +68,15 @@ n24q02m-kaggle-competitions/
 
 ## Competitions
 
-| Competition                                 | Status        | Best Score | Notebook                                                        |
-| ------------------------------------------- | ------------- | ---------- | --------------------------------------------------------------- |
+| Competition                                 | Status      | Best Score | Notebook                                                        |
+| ------------------------------------------- | ----------- | ---------- | --------------------------------------------------------------- |
 | [Titanic](https://www.kaggle.com/c/titanic) | In Progress | -          | [solution.ipynb](competitions/titanic/notebooks/solution.ipynb) |
+
+## Notebooks Tiện Ích
+
+| Notebook              | Mô tả                                                                 | Link                                                                 |
+| --------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Qwen3 ONNX Conversion | Chuyển đổi Qwen3-Embedding và Qwen3-Reranker sang ONNX + Quantization | [qwen3_onnx_conversion.ipynb](notebooks/qwen3_onnx_conversion.ipynb) |
 
 ## Makefile Commands
 
@@ -86,11 +92,13 @@ make clean        # Dọn dẹp cache
 ### Bắt đầu cuộc thi mới
 
 1. **Tạo thư mục competition:**
+
    ```bash
    mkdir -p competitions/<competition-name>/{data,notebooks,models,submissions}
    ```
 
 2. **Copy template notebook:**
+
    ```bash
    cp competitions/titanic/notebooks/solution.ipynb competitions/<competition-name>/notebooks/
    ```

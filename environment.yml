@@ -28,6 +28,15 @@ dependencies:
   - xgboost
   - lightgbm
 
+  # Deep Learning & NLP
+  - pytorch
+  - transformers
+  - sentence-transformers
+
+  # ONNX
+  - onnx
+  - onnxruntime
+
   # Utilities
   - requests
   - tqdm
@@ -39,3 +48,4 @@ dependencies:
       - catboost
       - optuna
       - kaggle
+      - optimum[onnxruntime]
