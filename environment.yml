@@ -49,3 +49,4 @@ dependencies:
       - optuna
       - kaggle
       - onnxconverter-common
+      - optimum[onnxruntime]
