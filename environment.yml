@@ -48,4 +48,4 @@ dependencies:
       - catboost
       - optuna
       - kaggle
-      - optimum[onnxruntime]
+      - onnxconverter-common
